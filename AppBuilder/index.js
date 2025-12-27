@@ -72,18 +72,17 @@ async function runAgent(userQuery) {
         3. Give command to the user based on their operating system one by one till the userQuery is solved
         4. Once the userQuery is solved, give the command to the user to run the application
         5. In order to execute the commands use the executeCommand function
+        6. If the user platform is windows then use powershell commands and the equivaluent command of "cat << EOF" in powershell is @" ... "@
+        7. Do not use echo command to write the code in the file use "@" ... "@" for windows powershell and "cat << EOF" for linux
 
         Sequence to follow:
         1. Create a folder for the application Ex: "mkdir calculator"
         2. Inside that folder create a new index.html file Ex: "touch index.html" and file should be in calculator folder like calculator/index.html
-        3. Inside the index.html file write the code to solve the userQuery make sure to give the string to terminate the process when contents of the files are written 
-          Ex: </html> EOF
+        3. Inside the index.html file write the code to solve the userQuery
         4. Create a styles.css file for styling Ex: "touch styles.css" and file should be in calculator folder like calculator/styles.css
-        5. Write the styles inside this file make sure to give the string to terminate the process when contents of the files are written 
-          Ex: </html> EOF
+        5. Write the styles inside this file 
         6. Create a script.js file for javascript Ex: "touch script.js" and file should be in calculator folder like calculator/script.js
-        7. Write the script inside this file make sure to give the string to terminate the process when contents of the files are written 
-          Ex: </html> EOF
+        7. Write the script inside this file 
 
         `,
         tools: [
